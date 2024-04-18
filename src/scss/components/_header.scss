@@ -1,0 +1,65 @@
+.header {
+    position: absolute;
+    top: 1.6rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        width: 23rem;
+
+        img {
+            object-fit: contain;
+        }
+    }
+    &-list {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 140%;
+        width: 113.4rem;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+            display: block;
+            transition: .3s;
+        }
+
+        a:hover {
+
+            span {
+                transform: scale(1.1);
+            }
+            // font-size: 2rem;
+        }
+    }
+    &-phone {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 140%;
+
+        &_svg {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 100%;
+            border: 1px solid #FFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+    }
+}

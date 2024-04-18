@@ -1,0 +1,157 @@
+@import './mixins';
+
+// $white: #fff;
+// $white60: rgba(255, 255, 255, 0.6);
+// $white70: rgba(255, 255, 255, 0.7);
+// $light-blue: #c5c1dd;
+// $dark-orange: #c14824;
+// $orange: #d15834;
+// $light-orange: #d66948;
+
+// // body
+// body {
+//   background-color: $orange;
+//   color: $white;
+//   .lock & {
+//     overflow: hidden;
+//     touch-action: none;
+//   }
+// }
+
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100%;
+//   justify-content: space-between;
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// // main
+// main {
+//   flex-grow: 1;
+// }
+
+section {
+  margin-bottom: 20rem;
+}
+
+.btn {
+  width: 27rem;
+  height: 7.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8rem;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 140%;
+  cursor: pointer;
+
+  @include small-tablet {
+    width: 34.6rem;
+    height: 10.6rem;
+    font-size: 3rem;
+  }
+
+  &-white {
+    background: rgba(232, 240, 245, 1);
+    color: rgba(46, 46, 46, 1);
+  }
+  &-blue {
+    background: url(../assets/images/btn-blue.webp);
+    background-size: cover;
+    color: rgba(255, 255, 255, 1);
+  }
+}
+.white-block {
+  position: relative;
+  border-radius: 5.2rem;
+  background: #E8F0F5;
+  color: rgba(46, 46, 46, 1);
+  overflow: hidden;
+
+  // &-bg {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 1;
+  //   // background-image: url(../assets/images/block-bg.webp);
+  //   // mask-image: linear-gradient(rgba(232, 240, 245, 0.4), rgba(232, 240, 245, 0.4));
+  //   // mix-blend-mode: luminosity;
+  //   // opacity: 0.4;
+
+  //   // &::after {
+  //   //   content: '';
+  //   //   position: absolute;
+  //   //   top: 0;
+  //   //   left: 0;
+  //   //   display: block;
+  //   //   width: 100%;
+  //   //   height: 100%;
+  //   //   background: rgba(232, 240, 245, 0.4);
+  //   // }
+  // }
+}
+
+.desktop {
+  display: block;
+
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media (max-width: 48em) {
+    display: block;
+  }
+}
+
+// .fp-watermark {
+//   display: none!important;
+// }
+
+// // .fp-overflow {
+// //   overflow: unset!important;
+// //   @media (max-width: 48em) {
+// //     overflow: auto!important;
+// //   }
+// // }
+
+// .bc {
+//   width: 174.4rem;
+//   margin: 5.2rem auto 0;
+//   display: flex;
+//   gap: 1.8rem;
+
+//   span {
+//     display: flex;
+//     align-items: center;
+//     gap: 1.8rem;
+//     &::after {
+//       content: '';
+//       display: block;
+//       width: 2.8rem;
+//       height: 2.8rem;
+//       background: url('../../assets/images/star-brown.svg');
+//       background-size: contain;
+//     }
+//     &:last-child {
+//       &::after {
+//         content: none;
+//       }
+//     }
+//   }
+// }
+// @media (max-width: 48em) {
+//   .bc {
+//     display: none;
+//   }
+// }
+
+// @import './ui/ui';
