@@ -6,8 +6,14 @@ import {
 import "jquery-ui/ui/effect";
 import { rem } from '../utils/constants';
 
+$('.header-burger').on('click', function(){
+    $('.header').toggleClass('open')
+    $('body').toggleClass('scrollnone')
+})
+
 $('.show-more').on('click', function(){
     const $content = $(this).closest('.show-content').find('.show-text')
+    console.log($content);
 
     if($content.hasClass('hideContent')){
         $content.switchClass("hideContent", "showContent", 400);
