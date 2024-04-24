@@ -1,6 +1,10 @@
 .services-all {
     padding-top: 12.6rem;
     overflow: hidden;
+
+    &.normal {
+        padding-top: 0;
+    }
     &_bottom {
         display: flex;
         justify-content: space-between;
@@ -17,8 +21,7 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            // text-shadow: 6px 6px 12px #7be5ff, 8px 8px 20px rgba(255, 255, 255, 0.8), 4px 4px 5px #061a2f;
-            filter: drop-shadow(6px 6px 12px #7be5ff) drop-shadow(8px 8px 20px rgba(255, 255, 255, 0.8)) drop-shadow(4px 4px 5px #061a2f);
+            filter: drop-shadow(4px 4px 3px #061a2f) drop-shadow(3px 3px 5px rgba(255, 255, 255, 0.8)) drop-shadow(3px 3px 3px #7be5ff);
         }
     }
 
@@ -217,6 +220,9 @@
             color: rgba(147, 156, 169, 1);
 
             &.services-all_block_text-title {
+                color: rgba(46, 46, 46, 1);
+            }
+            &.services-all_block_text-norm {
                 color: rgba(46, 46, 46, 1);
             }
         }
@@ -503,6 +509,9 @@
                             content: none;
                         }
                     }
+                }
+                p.h5 {
+                    font-size: 3.2rem;
                 }
             }
     

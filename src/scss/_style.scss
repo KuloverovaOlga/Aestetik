@@ -77,10 +77,10 @@ section {
     background-size: 3.8rem;
     background-repeat: no-repeat;
     background-position: 87% 50%;
-    transition: background-position 0.5s linear;
 
     &:hover {
       background-position: 84% 50%;
+      transition: background-position 0.5s;
     }
 
     @include small-tablet {
@@ -91,6 +91,45 @@ section {
       border-radius: 12rem;
       background-size: 7.6rem;
       background-position: 92% 50%;
+    }
+  }
+  &-back {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    padding: 1.6rem 2rem 1.6rem 7.4rem;
+    border-radius: 6rem;
+    border: 1px solid #FFF;
+    background: rgba(217, 217, 217, 0.1);
+
+    svg {
+      position: absolute;
+      width: 3.9rem;
+      height: 1.1rem;
+      left: 2rem;
+      top: 40%;
+      transition: transform 0.5s;
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(1rem);
+      }
+    }
+
+    @include small-tablet {
+      justify-content: right;
+      height: fit-content;
+      padding: 3.2rem 4rem 3.2rem 11.2rem;
+      width: fit-content;
+      svg {
+        width: 5rem;
+        height: 2.2rem;
+        left: 3.2rem;
+        top: 40%;
+        transition: transform 0.5s;
+      }
+  
     }
   }
 }
