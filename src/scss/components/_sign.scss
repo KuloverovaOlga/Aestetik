@@ -2,6 +2,12 @@
     .container {
         display: flex;
         gap: 3.2rem;
+
+        & ~ .btn.btn-white {
+            margin-top: 6.5rem;
+            margin-left: auto;
+            margin-right: 8.1rem;
+        }
     }
 
     &_img {
@@ -25,7 +31,15 @@
     &_title {
         color: rgba(46, 46, 46, 1);
         text-transform: uppercase;
+    }
+    &_subtitle {
+        color: rgba(147, 156, 169, 1);
+    }
+    &_top {
         margin-bottom: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
     }
 }
 
@@ -67,7 +81,10 @@
             background-size: contain;
         }
     }
-
+    &_block{
+        display: flex;
+        gap: 2rem;
+    }
     &_input {
         font-weight: 400;
         font-size: 1.8rem;
@@ -76,6 +93,11 @@
         padding: 1.8rem 3.6rem;
         border: 1px solid rgba(147, 156, 169, 1);
         border-radius: 100rem;
+        flex: 1;
+
+        input {
+            width: 100%;
+        }
     }
     &_bottom {
         display: flex;
@@ -167,6 +189,11 @@
         .container {
             flex-direction: column;
             gap: 3.6rem;
+
+            & ~ .btn.btn-white {
+                margin-top: 6.4rem;
+                margin-right: 2rem;
+            }
         }
     
         &_img {
@@ -179,10 +206,16 @@
             padding: 4.8rem 3.2rem;
         }
         &_title {
-            margin-bottom: 4.8rem;
             font-weight: 400;
             font-size: 4.8rem;
             line-height: 120%;
+        }
+        &_subtitle {
+            font-size: 3rem;
+        }
+        &_top {
+            margin-bottom: 4.8rem;
+            gap: 3.2rem;
         }
     }
     
@@ -226,6 +259,10 @@
             .btn {
                 width: 100%;
             }
+        }
+        &_block{
+            flex-direction: column;
+            gap: 2.4rem;
         }
     }
     .ui-selectmenu-menu {

@@ -201,6 +201,12 @@ section {
       background: linear-gradient(180deg, #7be5ff 16.76%, #1d7dd4 100%);
     }
   }
+  &.mobile {
+    display: none;
+    @include small-tablet {
+      display: flex;
+    }
+  }
 
 }
 
