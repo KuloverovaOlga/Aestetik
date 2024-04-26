@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=4d7b8985-4ebf-4fde-8884-668550d59df1&lang=ru_RU"></script>
+    <title>О клинике</title>
+  </head>
+  <body>
+    <include src="./components/_header.html"></include>
+    <main>
+      <section class="sign">
+        <div class="container">
+            <div class="sign_img">
+                <img src="../assets/images/sign-bg.webp" alt="">
+            </div>
+            <div class="sign_container">
+                <div class="sign_top">
+                    <div class="sign_title h2">Запишитесь на прием</div>
+                </div>
+                <form class="form">
+                    <div class="form_block">
+                        <div class="form_input-select">
+                            <select>
+                                <option disabled selected>Выберите услугу</option>
+                                <option>Услуга1</option>
+                                <option>Услуга2</option>
+                                <option>Услуга3</option>
+                                <option>Услуга4</option>
+                                <option>Услуга1</option>
+                                <option>Услуга2</option>
+                                <option>Услуга3</option>
+                                <option>Услуга4</option>
+                                <option>Услуга1</option>
+                                <option>Услуга2</option>
+                                <option>Услуга3</option>
+                                <option>Услуга4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_block">
+                        <div class="form_input">
+                            <input type="text" placeholder="Имя">
+                        </div>
+                    </div>
+                    <div class="form_block">
+                        <div class="form_input">
+                            <input type="text" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="form_block">
+                        <div class="form_input">
+                            <input type="text" placeholder="Номер телефона">
+                        </div>
+                    </div>
+                    <div class="form_block">
+                        <div class="form_input">
+                            <input type="text" placeholder="Ваш комментарий">
+                        </div>
+                    </div>
+                    <div class="form_bottom">
+                        <div class="form_bottom-text">Отправляя заявку, Вы соглашаетесь на обработку своих данных</div>
+                        <button class="btn btn-blue">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="btn btn-white">На главную</div>
+      </section>
+    </main>
+    <include src="./components/_footer.html"></include>
+
+    <!-- <script>
+      initMap();
+      async function initMap() {
+          // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+          await ymaps3.ready;
+
+          const {YMap, YMapDefaultSchemeLayer,YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
+
+          // Иницилиазируем карту
+          const map = new YMap(document.getElementById('main-map_yandex'),
+
+              // Передаём параметры инициализации карты
+              {
+                  location: {
+                      // Координаты центра карты
+                      center: [37.44078981889843, 55.69098010599467],
+
+                      // Уровень масштабирования
+                      zoom: 12
+                  }
+              }
+              
+          );
+          map.addChild(new YMapDefaultFeaturesLayer());
+          const content = document.createElement('div');
+          content.className = 'main-map_yandex-box';
+          content.innerHTML = `<img src="../assets/images/icon/map-icon.webp" alt="">`
+          const marker = new YMapMarker(
+            {
+              coordinates: [37.44078981889843, 55.69098010599467],
+            },
+            content
+          );
+
+          map.addChild(marker);
+          map.addChild(new YMapDefaultSchemeLayer());
+      }
+    </script> -->
+  </body>
+</html>

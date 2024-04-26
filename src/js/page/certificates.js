@@ -2,8 +2,6 @@ import $ from "jquery";
 import Swiper from 'swiper';
 import {
 	Pagination,
-	Navigation,
-	Grid
 } from "swiper/modules";
 import { rem } from '../utils/constants';
 

@@ -57,11 +57,17 @@ section {
   &-white {
     background: rgba(232, 240, 245, 1);
     color: rgba(46, 46, 46, 1);
+    transition: font-size 0.5s;
+
+    &:hover {
+      font-size: 2rem;
+    }
   }
   &-blue {
     background: url(../assets/images/btn-blue.webp);
     background-size: cover;
     color: rgba(255, 255, 255, 1);
+    transition: font-size 0.5s;
 
     &:hover {
       font-size: 2rem;
