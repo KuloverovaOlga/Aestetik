@@ -41,6 +41,31 @@
         flex-direction: column;
         gap: 2.4rem;
     }
+
+    &-certificate {
+        &.sign {
+            .container {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                gap: 6.5rem;
+            }
+            .sign {
+                &_img {
+                    width: 138rem;
+                    height: 75.8rem;
+                    border-radius: 5.2rem;
+                }
+                &_container {
+                    position: absolute;
+                    top: 8rem;
+                    left: 0;
+                    width: 86rem;
+                }
+            }
+        }
+    }
 }
 
 .form {
@@ -96,6 +121,9 @@
         flex: 1;
 
         input {
+            width: 100%;
+        }
+        &-select {
             width: 100%;
         }
     }
@@ -216,6 +244,34 @@
         &_top {
             margin-bottom: 4.8rem;
             gap: 3.2rem;
+        }
+
+        &-certificate {
+            &.sign {
+                .container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: initial;
+                    gap: 0;
+                }
+                .sign {
+                    &_img {
+                        width: auto;
+                        height: 67.8rem;
+                        border-radius: 4.8rem;
+                        margin-bottom: 3.6rem;
+                    }
+                    &_container {
+                        position: initial;
+                        width: 100%;
+                        margin-bottom: 6.4rem;
+                    }
+                }
+            }
+            .btn-white {
+                margin-left: auto;
+            }
         }
     }
     
