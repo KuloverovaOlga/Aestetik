@@ -66,11 +66,15 @@
 @include small-tablet {
     .header {
         position: absolute;
-        top: 2.4rem;
+        top: 0;
         left: 0;
         right: 0;
         margin: auto;
         z-index: 1;
+
+        .container {
+            padding-top: 2.4rem;
+        }
 
         &.open {
             height: 100vh;

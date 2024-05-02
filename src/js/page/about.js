@@ -26,7 +26,7 @@ if (window.screen.width < 769) {
     const choose_swiper = new Swiper('.choose_swiper', {
         modules: [Virtual, Autoplay],
         direction: "vertical",
-        slidesPerView: 'auto',
+        slidesPerView: 3,
         spaceBetween: rem(6.5),
         autoplay: {
             delay: 5000,
