@@ -28,6 +28,7 @@
             font-size: 2.4rem;
             line-height: 140%;
             margin-bottom: 3.2rem;
+            filter: drop-shadow(0 0 10px #000);
         }
         &-title {
             font-family: 'AlegreyaSans';
@@ -95,6 +96,7 @@
                 line-height: 150%;
                 letter-spacing: 0.03em;
                 margin-bottom: 5rem;
+                filter: none;
             }
             &-title {
                 font-weight: 400;

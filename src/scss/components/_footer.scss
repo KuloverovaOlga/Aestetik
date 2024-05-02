@@ -29,8 +29,14 @@
             grid-row: 1/3;
 
             a {
+                display: block;
                 text-wrap: nowrap;
+
+                &:hover {
+                    filter: drop-shadow(0 0 30px #7be5ff) drop-shadow(0 0 30px #7be5ff) drop-shadow(0 0 30px #7be5ff);
+                }
             }
+
         }
         &-infos {
             display: flex;
