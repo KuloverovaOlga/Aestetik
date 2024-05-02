@@ -32,9 +32,9 @@
         }
 
         a:hover {
-
             span {
                 transform: scale(1.1);
+                filter: drop-shadow(0 0 30px #7be5ff) drop-shadow(0 0 30px #7be5ff) drop-shadow(0 0 30px #7be5ff)
             }
             // font-size: 2rem;
         }
