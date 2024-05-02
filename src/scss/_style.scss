@@ -32,6 +32,13 @@
 //   flex-grow: 1;
 // }
 
+body {
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
 section {
   margin-bottom: 20rem;
 }
