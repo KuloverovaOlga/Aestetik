@@ -24,7 +24,8 @@
     }
     &_container {
         flex: 1;
-        background: #E8F0F5;
+        // background: #E8F0F5;
+        background: #E8F0F5 url(../../assets/images/bg-white.webp) no-repeat top/cover;
         border-radius: 5.2rem;
         padding: 6rem;
     }
