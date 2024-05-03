@@ -216,6 +216,14 @@
   </div>
 </div>
 
+
+    <div class="preloader" style="position: fixed; inset: -10px; background: #001933">
+      <video muted playsinline id="preloader__video">
+        <source src="./assets/images/mobile-intro.mp4" type="video/mp4" media="(max-width: 768px)" />
+        <source src="./assets/images/intro.mp4" type="video/mp4" media="(min-width: 769px)" />
+      </video>
+    </div>
+
     <main>
       <section class="main-baner">
     <div class="container">
@@ -738,40 +746,43 @@
     <script>
       initMap();
       async function initMap() {
-          // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
-          await ymaps3.ready;
+        // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+        await ymaps3.ready;
 
-          const {YMap, YMapDefaultSchemeLayer,YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
+        const { YMap, YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer, YMapMarker } = ymaps3;
 
-          // Иницилиазируем карту
-          const map = new YMap(document.getElementById('main-map_yandex'),
+        // Иницилиазируем карту
+        const map = new YMap(
+          document.getElementById('main-map_yandex'),
 
-              // Передаём параметры инициализации карты
-              {
-                  location: {
-                      // Координаты центра карты
-                      center: [37.44078981889843, 55.69098010599467],
+          // Передаём параметры инициализации карты
+          {
+            location: {
+              // Координаты центра карты
+              center: [37.44078981889843, 55.69098010599467],
 
-                      // Уровень масштабирования
-                      zoom: 12
-                  }
-              }
-              
-          );
-          map.addChild(new YMapDefaultFeaturesLayer());
-          const content = document.createElement('div');
-          content.className = 'main-map_yandex-box';
-          content.innerHTML = `<img src="../assets/images/icon/map-icon.webp" alt="">`
-          const marker = new YMapMarker(
-            {
-              coordinates: [37.44078981889843, 55.69098010599467],
-            },
-            content
-          );
+              // Уровень масштабирования
+              zoom: 12
+            }
+          }
+        );
+        map.addChild(new YMapDefaultFeaturesLayer());
+        const content = document.createElement('div');
+        content.className = 'main-map_yandex-box';
+        content.innerHTML = `<img src="../assets/images/icon/map-icon.webp" alt="">`;
+        const marker = new YMapMarker(
+          {
+            coordinates: [37.44078981889843, 55.69098010599467]
+          },
+          content
+        );
 
-          map.addChild(marker);
-          map.addChild(new YMapDefaultSchemeLayer());
+        map.addChild(marker);
+        map.addChild(new YMapDefaultSchemeLayer());
       }
+    
+     
+    
     </script>
   </body>
 </html>
