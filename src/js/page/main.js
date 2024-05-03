@@ -28,7 +28,7 @@ $('.main-space_box--more').on('click', function(){
     $('.main-space_box').toggleClass('active')
 })
 
-$('.main-cosmetics_block').on('click', function(){
+$('.main-cosmetics_block').on('mouseenter', function(){
     $('.main-cosmetics_block').removeClass('active')
     $('.main-cosmetics_item').removeClass('active')
     $(this).addClass('active')
