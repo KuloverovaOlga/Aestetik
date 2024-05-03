@@ -31,8 +31,10 @@
             a {
                 display: block;
                 text-wrap: nowrap;
+                transition: transform 0.3s, filter 0.3s;
 
                 &:hover {
+                    transform: scale(1.03);
                     filter: drop-shadow(0 0 30px #7be5ff) drop-shadow(0 0 30px #7be5ff) drop-shadow(0 0 30px #7be5ff);
                 }
             }

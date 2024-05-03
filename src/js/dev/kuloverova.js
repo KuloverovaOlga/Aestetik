@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     form();
   } catch {}
   try {
+    scroll();
+  } catch {}
+  try {
     if (window.innerWidth > 768) {
       animMainSpace();
     }
@@ -33,13 +36,10 @@ function intro() {
   setTimeout(() => {
     video.style.opacity = '1';
     video.play();
-
   }, 300);
   setTimeout(() => {
     preloader.classList.add('preloader-remove');
   }, 3500);
-
-  
 }
 
 function animMainSpace() {
@@ -58,6 +58,21 @@ function animMainSpace() {
     scrub: 2,
     toggleActions: 'play none reverse none'
   });
+}
+
+function scroll() {
+  const anchors = document.querySelectorAll(`.nav-link`);
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', (e) => {
+      e.preventDefault();
+      const blockId = anchor.getAttribute('href');
+      document.querySelector('' + blockId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  }
 }
 
 // Пример использования для одного элемента
