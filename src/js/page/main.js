@@ -2,6 +2,8 @@ import $ from "jquery";
 import Swiper from 'swiper';
 import {
 	Pagination,
+    Navigation,
+    Mousewheel
 } from "swiper/modules";
 import "jquery-ui/ui/effect";
 import { rem } from '../utils/constants';
@@ -33,11 +35,36 @@ $('.main-cosmetics_block').on('click', function(){
     $($('.main-cosmetics_item')[$(this).closest('.swiper-slide').index()]).addClass('active')
 })
 
+const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
+    modules: [Pagination, Mousewheel],
+	spaceBetween: rem(10),
+    // autoHeight: true,
+    mousewheel: {
+        enabled: true,
+        releaseOnEdges: true,
+    },
+    pagination: {
+        el: ".main-equipment_pagin",
+    },
+});
+
+$('.main-equipment_container-box_swiper').each(function( index ) {
+    new Swiper(this, {
+        modules: [Navigation],
+        slidesPerView: 'auto',
+        navigation: {
+            nextEl: $(this).siblings(".main-equipment_container-box_swiper-right")[0],
+            prevEl: $(this).siblings(".main-equipment_container-box_swiper-left")[0],
+        },
+    });
+});
+
+
 if (window.screen.width < 769) {
     const swiper = new Swiper('.main-cosmetics_swiper', {
         modules: [Pagination],
         pagination: {
-            el: ".swiper-pading",
+            el: ".main-cosmetics_pagination",
         },
     });
 }
