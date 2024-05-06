@@ -72,6 +72,11 @@
                 margin-bottom: 0;
                 border-bottom: none;
             }
+            &--small {
+                .txt20 {
+                    text-transform: initial;
+                }
+            }
         }
         &-map {
             position: relative;
