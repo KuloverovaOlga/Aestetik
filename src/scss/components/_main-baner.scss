@@ -24,6 +24,11 @@
             height: 100%;
             object-fit: cover;
         }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     &_container {
         position: absolute;
@@ -99,6 +104,9 @@
             }
             &::before {
                 content: none;
+            }
+            video {
+                object-position: -3rem;
             }
         }
         &_container {
