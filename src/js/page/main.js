@@ -56,9 +56,27 @@ const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
             setTimeout(function () {
                 main_equipment_swiper.params.mousewheel.releaseOnEdges = true;
             }, 750);
+        },
+        reachBeginning: function() {
+            setTimeout(function () {
+                main_equipment_swiper.params.mousewheel.releaseOnEdges = true;
+            }, 750);
+        },
+        slideChangeTransitionStart: function (swiper) {
+            if ((swiper.activeIndex == 0) || (swiper.activeIndex == swiper.slides.length - 1)) {
+                centeredBlock(0);
+            } else {
+                centeredBlock(500);
+            }
+
         }
     }
 });
+function centeredBlock(speed) {
+    $('html, body').animate({
+        scrollTop: $('.main-equipment').offset().top - 0
+    }, speed);
+}
 
 $('.main-equipment_container-box_swiper').each(function( index ) {
     new Swiper(this, {
