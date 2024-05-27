@@ -35,6 +35,8 @@ $('.main-cosmetics_block').on('mouseenter', function(){
     $($('.main-cosmetics_item')[$(this).closest('.swiper-slide').index()]).addClass('active')
 })
 
+
+$('.main-equipment').find('.btn-blue').attr("href", $('.main-equipment_swiper').find('.main-equipment_container')[0].getAttribute('data-href'))
 const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
     modules: [Pagination, Mousewheel],
 	spaceBetween: rem(10),
@@ -47,10 +49,11 @@ const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
         el: ".main-equipment_pagin",
     },
     on: {
-        slideChange: function() {
+        slideChange: function(e) {
             setTimeout(function () {
                 main_equipment_swiper.params.mousewheel.releaseOnEdges = false;
             }, 500);
+            $('.main-equipment').find('.btn-blue').attr("href", $('.main-equipment_swiper').find('.main-equipment_container')[e.activeIndex].getAttribute('data-href'))
         },
         reachEnd: function() {
             setTimeout(function () {
