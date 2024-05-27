@@ -48,6 +48,7 @@ const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
     pagination: {
         el: ".main-equipment_pagin",
     },
+    speed: 2500,
     on: {
         slideChange: function(e) {
             setTimeout(function () {
