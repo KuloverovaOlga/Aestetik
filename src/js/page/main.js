@@ -46,6 +46,18 @@ const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
     pagination: {
         el: ".main-equipment_pagin",
     },
+    on: {
+        slideChange: function() {
+            setTimeout(function () {
+                main_equipment_swiper.params.mousewheel.releaseOnEdges = false;
+            }, 500);
+        },
+        reachEnd: function() {
+            setTimeout(function () {
+                main_equipment_swiper.params.mousewheel.releaseOnEdges = true;
+            }, 750);
+        }
+    }
 });
 
 $('.main-equipment_container-box_swiper').each(function( index ) {
