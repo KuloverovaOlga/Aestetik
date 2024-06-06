@@ -1,7 +1,80 @@
+// .sign {
+//   .container {
+//     display: flex;
+//     gap: 3.2rem;
+
+//     & ~ .btn.btn-white {
+//       margin-top: 6.5rem;
+//       margin-left: auto;
+//       margin-right: 8.1rem;
+//     }
+//   }
+
+//   &_img {
+//     border-radius: 5.2rem;
+//     flex: none;
+//     overflow: hidden;
+//     width: 85.4rem;
+
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+//   &_container {
+//     flex: 1;
+//     // background: #E8F0F5;
+//     background: #e8f0f5 url(../../assets/images/bg-white.webp) no-repeat top/cover;
+//     border-radius: 5.2rem;
+//     padding: 6rem;
+//   }
+//   &_title {
+//     color: rgba(46, 46, 46, 1);
+//     text-transform: uppercase;
+//   }
+//   &_subtitle {
+//     color: rgba(147, 156, 169, 1);
+//   }
+//   &_top {
+//     margin-bottom: 4rem;
+//     display: flex;
+//     flex-direction: column;
+//     gap: 2.4rem;
+//   }
+
+//   &-certificate {
+//     padding-top: 10rem;
+//     margin-top: -10rem;
+//     &.sign {
+//       .container {
+//         position: relative;
+//         display: flex;
+//         flex-direction: column;
+//         align-items: end;
+//         gap: 6.5rem;
+//       }
+//       .sign {
+//         &_img {
+//           width: 138rem;
+//           height: 75.8rem;
+//           border-radius: 5.2rem;
+//         }
+//         &_container {
+//           position: absolute;
+//           top: 8rem;
+//           left: 0;
+//           width: 86rem;
+//         }
+//       }
+//     }
+//   }
+// }
+
 .sign {
   .container {
     display: flex;
-    gap: 3.2rem;
+    // align-items: center;
 
     & ~ .btn.btn-white {
       margin-top: 6.5rem;
@@ -12,9 +85,12 @@
 
   &_img {
     border-radius: 5.2rem;
-    flex: none;
     overflow: hidden;
-    width: 85.4rem;
+    width: 111.4rem;
+    height: 60.2rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 5;
 
     img {
       width: 100%;
@@ -24,10 +100,16 @@
   }
   &_container {
     flex: 1;
-    // background: #E8F0F5;
     background: #e8f0f5 url(../../assets/images/bg-white.webp) no-repeat top/cover;
-    border-radius: 5.2rem;
-    padding: 6rem;
+    border-radius: 0 5.2rem 5.2rem 0;
+    padding: 6rem 6rem 6rem 9.5rem;
+    height: auto;
+    margin: 3.9rem 0;
+    margin-left: -2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
   }
   &_title {
     color: rgba(46, 46, 46, 1);
@@ -35,6 +117,9 @@
   }
   &_subtitle {
     color: rgba(147, 156, 169, 1);
+    & br {
+      display: none;
+    }
   }
   &_top {
     margin-bottom: 4rem;
@@ -48,26 +133,75 @@
     margin-top: -10rem;
     &.sign {
       .container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 6.5rem;
+     
       }
       .sign {
         &_img {
-          width: 138rem;
-          height: 75.8rem;
-          border-radius: 5.2rem;
+
         }
         &_container {
-          position: absolute;
-          top: 8rem;
-          left: 0;
-          width: 86rem;
+ 
         }
       }
     }
+  }
+  & .btn.btn-blue {
+    min-width: 35.8rem;
+  }
+}
+
+.specialist-more_sign {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  & .sign {
+    &_img {
+      border-radius: 5.2rem;
+      overflow: hidden;
+      width: 70.3rem;
+      height: 50.2rem;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 5;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &_container {
+      flex: 0;
+      background: #e8f0f5 url(../../assets/images/bg-white.webp) no-repeat top/cover;
+      border-radius: 5.2rem 5.2rem 0 0;
+      padding: 4rem 4rem 11rem;
+      margin-bottom: -5rem;
+      margin-left: 0;
+    }
+    &_title {
+      color: rgba(46, 46, 46, 1);
+      text-transform: uppercase;
+      & br {
+        display: none;
+      }
+    }
+    &_subtitle {
+      color: rgba(147, 156, 169, 1);
+     
+    }
+    &_top {
+      margin-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+
+    & .btn.btn-blue {
+      min-width: 35.8rem;
+    }
+  }
+  & .btn.btn-blue {
+    min-width: 35.8rem;
   }
 }
 
@@ -111,7 +245,6 @@
   &_block {
     display: flex;
     gap: 2rem;
-
   }
   &_input-wrapper {
     display: flex;
@@ -225,10 +358,71 @@
 }
 
 @include small-tablet {
+  // .sign {
+  //   .container {
+  //     flex-direction: column;
+  //     gap: 3.6rem;
+
+  //     & ~ .btn.btn-white {
+  //       margin-top: 6.4rem;
+  //       margin-right: 2rem;
+  //     }
+  //   }
+
+  //   &_img {
+  //     border-radius: 4.8rem;
+  //     width: 100%;
+  //     height: 67.8rem;
+  //   }
+  //   &_container {
+  //     border-radius: 6.4rem;
+  //     padding: 4.8rem 3.2rem;
+  //   }
+  //   &_title {
+  //     font-weight: 400;
+  //     font-size: 4.8rem;
+  //     line-height: 120%;
+  //   }
+  //   &_subtitle {
+  //     font-size: 3rem;
+  //   }
+  //   &_top {
+  //     margin-bottom: 4.8rem;
+  //     gap: 3.2rem;
+  //   }
+
+  //   &-certificate {
+  //     &.sign {
+  //       .container {
+  //         position: relative;
+  //         display: flex;
+  //         flex-direction: column;
+  //         align-items: initial;
+  //         gap: 0;
+  //       }
+  //       .sign {
+  //         &_img {
+  //           width: auto;
+  //           height: 67.8rem;
+  //           border-radius: 4.8rem;
+  //           margin-bottom: 3.6rem;
+  //         }
+  //         &_container {
+  //           position: initial;
+  //           width: 100%;
+  //           margin-bottom: 6.4rem;
+  //         }
+  //       }
+  //     }
+  //     .btn-white {
+  //       margin-left: auto;
+  //     }
+  //   }
+  // }
+
   .sign {
     .container {
-      flex-direction: column;
-      gap: 3.6rem;
+      flex-direction: column-reverse;
 
       & ~ .btn.btn-white {
         margin-top: 6.4rem;
@@ -238,20 +432,32 @@
 
     &_img {
       border-radius: 4.8rem;
-      width: 100%;
+      // width: 100%;
       height: 67.8rem;
+      width: 75rem;
+      margin: 0 -2rem;
     }
     &_container {
-      border-radius: 6.4rem;
-      padding: 4.8rem 3.2rem;
+      border-radius: 6.4rem 6.4rem 0 0;
+      padding: 4.8rem 3.2rem 6.8rem;
+      margin-left: 0;
+      margin-bottom: -2rem;
+      width: 100%;
     }
     &_title {
       font-weight: 400;
-      font-size: 4.8rem;
+      font-size: 4.7rem;
       line-height: 120%;
+      & br {
+        display: none;
+      }
     }
     &_subtitle {
       font-size: 3rem;
+      letter-spacing: 0.06em;
+      & br {
+        display: block;
+      }
     }
     &_top {
       margin-bottom: 4.8rem;
@@ -259,31 +465,79 @@
     }
 
     &-certificate {
-      &.sign {
-        .container {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: initial;
-          gap: 0;
-        }
-        .sign {
-          &_img {
-            width: auto;
-            height: 67.8rem;
-            border-radius: 4.8rem;
-            margin-bottom: 3.6rem;
-          }
-          &_container {
-            position: initial;
-            width: 100%;
-            margin-bottom: 6.4rem;
-          }
+      // &.sign {
+      //   .container {
+      //     position: relative;
+      //     display: flex;
+      //     flex-direction: column;
+      //     align-items: initial;
+      //     gap: 0;
+      //   }
+      //   .sign {
+      //     &_img {
+      //       width: auto;
+      //       height: 67.8rem;
+      //       border-radius: 4.8rem;
+      //       margin-bottom: 3.6rem;
+      //     }
+      //     &_container {
+      //       position: initial;
+      //       width: 100%;
+      //       margin-bottom: 6.4rem;
+      //     }
+      //   }
+      // }
+      // .btn-white {
+      //   margin-left: auto;
+      // }
+    }
+
+    & .btn.btn-blue {
+      width: 100%;
+    }
+  }
+
+  .specialist-more_sign {
+
+    & .sign {
+      &_img {
+        border-radius: 4.8rem;
+   height: 67.8rem;
+      width: 75rem;
+      margin: 0 -2rem;
+  
+   
+      }
+      &_container {
+        border-radius: 6.4rem 6.4rem 0 0;
+        padding: 4.8rem 3.2rem 6.8rem;
+        margin-left: 0;
+        margin-bottom: -2rem;
+      }
+      &_title {
+        font-weight: 400;
+        font-size: 4.8rem;
+        line-height: 120%;
+        & br {
+          display: none;
         }
       }
-      .btn-white {
-        margin-left: auto;
+      &_subtitle {
+        font-size: 3rem;
+        letter-spacing: 0.06em;
+     
       }
+      &_top {
+        margin-bottom: 4.8rem;
+        gap: 3.2rem;
+      }
+  
+      & .btn.btn-blue {
+        min-width: 35.8rem;
+      }
+    }
+    & .btn.btn-blue {
+      width: 100%;
     }
   }
 
