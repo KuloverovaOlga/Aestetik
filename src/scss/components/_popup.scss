@@ -95,7 +95,7 @@ body::before {
     border-radius: 4rem;
     visibility: hidden;
     transform: scale(0);
-    transition: transform 0.3s ease 0s;
+    transition: transform 0.8s ease 0s;
     position: relative;
     .lock & {
       visibility: visible;

@@ -4,7 +4,7 @@ import popup from '../utils/popup';
 import form from '../utils/form';
 import { gsap, ScrollTrigger } from 'gsap/all';
 export const modules = {};
-
+import Swiper from 'swiper';
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
   try {
@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch {}
   try {
     scroll();
+  } catch {}
+  try {
+    equipment();
   } catch {}
   try {
     if (window.innerWidth > 768) {
@@ -73,6 +76,13 @@ function scroll() {
       });
     });
   }
+}
+
+function equipment() {
+  let swiper = new Swiper('.equipment-detail_btns-swiper', {
+   
+    slidesPerView: 'auto',
+  });
 }
 
 // Пример использования для одного элемента
