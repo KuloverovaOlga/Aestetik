@@ -36,7 +36,9 @@ $('.main-cosmetics_block').on('mouseenter', function(){
 })
 
 
-$('.main-equipment').find('.btn-blue').attr("href", $('.main-equipment_swiper').find('.main-equipment_container')[0].getAttribute('data-href'))
+if($('.main-equipment').length) {
+    $('.main-equipment').find('.btn-blue').attr("href", $('.main-equipment_swiper').find('.main-equipment_container')[0].getAttribute('data-href'))
+}
 const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
     modules: [Pagination, Mousewheel],
 	spaceBetween: rem(10),
