@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     equipment();
   } catch {}
   try {
-    if (window.innerWidth > 768) {
-      animMainSpace();
-    }
+    animMainSpace();
   } catch {}
 });
 
@@ -46,6 +44,18 @@ function intro() {
 }
 
 function animMainSpace() {
+  let number = 0
+  if (window.innerWidth > 768) {
+    $('.main-space_img').each(function( index ) {
+      if(index > 2) {
+        number += $('.main-space_img').width()
+      }
+    })
+  } else {
+    $('.main-space_img').each(function( index ) {
+      number += $('.main-space_img').width()
+    })
+  }
   const elem = document.querySelector('.main-space_list');
   const section = document.querySelector('.main-space');
   ScrollTrigger.create({
@@ -53,7 +63,7 @@ function animMainSpace() {
     animation: gsap.from(elem, {
       keyframes: {
         '0%': { x: '=0' },
-        '100%': { x: '-=12%' }
+        '100%': { x: `-=${number}` }
       }
     }),
     start: 'top bottom',
