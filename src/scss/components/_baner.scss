@@ -1,6 +1,7 @@
 .baner {
     position: relative;
-    height: 90rem;
+    // height: 90rem;
+    min-height: 90rem;
     .container {
         width: 100%;
     }
@@ -14,11 +15,13 @@
         position: relative;
         z-index: 2;
         top: 14.1rem;
-        height: 66.6rem;
+        // height: 66.6rem;
+        min-height: 66.6rem;
         width: 101rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 2rem 2rem 2rem 9rem;
         padding-left: 9rem;
         &::after {
             content: '';
@@ -76,6 +79,7 @@
         position: initial;
         height: auto;
         margin-top: 16.8rem;
+        min-height: auto;
         .container {
             width: 100%;
         }
@@ -87,11 +91,12 @@
             z-index: 2;
             top: auto;
             height: auto;
+            min-height: auto;
             width: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-left: 0;
+            padding: 0;
             &::after {
                 content: none;
             }
