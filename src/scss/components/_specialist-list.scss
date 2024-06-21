@@ -1,4 +1,13 @@
 .specialist-list {
+    &--other {
+        .specialist-list_item-name {
+            display: -webkit-box;
+            -webkit-line-clamp: 2; //количество текста который будет отображатся
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
     &_grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -43,7 +52,7 @@
                 height: 100%;
                 object-fit: cover;
                 transition: transform .5s;
-                mix-blend-mode: multiply;
+                // mix-blend-mode: multiply;
             }
         }
         &-name {

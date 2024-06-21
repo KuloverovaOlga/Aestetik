@@ -72,6 +72,35 @@
             mask-image: linear-gradient(rgba(0, 0, 0, 0) -5%, rgb(0, 0, 0) 20%, rgb(0, 0, 0) 80%, rgba(0, 0, 0, 0) 100%);
         }
     }
+    &--articles {
+        &.baner {
+            min-height: initial;
+        }
+        .container {
+            display: flex;
+            margin-top: 14.1rem;
+            gap: 3.3rem;
+        }
+        .baner_box {
+            top: 0;
+            width: 109.2rem;
+        }
+        .baner_img {
+            position: static;
+            flex: 1;
+            padding-right: 9rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 1.6rem;
+            }
+        }
+        .baner_box-title {
+            width: 80rem;
+        }
+    }
 }
 
 @include small-tablet {
@@ -146,6 +175,37 @@
             .baner_box-title {
                 font-size: 6rem;
                 display: inline;
+            }
+        }
+        &--articles {
+
+            .baner_box-subtitle {
+                text-wrap: nowrap;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                margin-top: 0;
+                gap: 4rem;
+                overflow: hidden;
+            }
+            .baner_box {
+                top: 0;
+                width: auto;
+            }
+            .baner_img {
+                position: static;
+                flex: none;
+                padding-right: 0;
+                display: block;
+                height: 64rem;
+    
+                img {
+                    border-radius: 4rem;
+                }
+            }
+            .baner_box-title {
+                width: auto;
             }
         }
     }
