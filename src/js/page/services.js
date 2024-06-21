@@ -9,12 +9,17 @@ import { rem } from '../utils/constants';
 
 const services_all_switcher = new Swiper('.services-all_switcher', {
 	modules: [Navigation],
-	slidesPerView: 'auto',
+	slidesPerView: 1,
 	spaceBetween: rem(3.2),
 	navigation: {
         nextEl: ".services-all_switcher-right",
         prevEl: ".services-all_switcher-left",
     },
+	breakpoints: {
+		769: {
+			slidesPerView: 'auto',
+		},
+	},
 });
 
 if (window.screen.width < 769) {

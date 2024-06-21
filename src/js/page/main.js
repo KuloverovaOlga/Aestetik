@@ -15,7 +15,7 @@ $('.header-burger').on('click', function(){
 
 $('.show-more').on('click', function(){
     const $content = $(this).closest('.show-content').find('.show-text')
-    console.log($content);
+    // console.log($content);
 
     if($content.hasClass('hideContent')){
         $content.switchClass("hideContent", "showContent", 400);
@@ -50,7 +50,12 @@ const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
     pagination: {
         el: ".main-equipment_pagin",
     },
-    speed: 2500,
+    speed: 300,
+    breakpoints: {
+        769: {
+            speed: 2500,
+        },
+    },
     on: {
         slideChange: function(e) {
             if (window.innerWidth > 768) {
@@ -85,6 +90,7 @@ const main_equipment_swiper = new Swiper('.main-equipment_swiper', {
 
         }
     }
+    
 });
 function centeredBlock(speed) {
     $('html, body').animate({
