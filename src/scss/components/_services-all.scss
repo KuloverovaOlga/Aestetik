@@ -133,7 +133,7 @@
     &_item {
         border-radius: 5.2rem;
         // background: #E8F0F5;
-        background: #E8F0F5 url(../../assets/images/bg-white.webp) no-repeat top/cover;
+        background: #E8F0F5 url(./assets/images/bg-white.webp) no-repeat top/cover;
         color: rgb(46, 46, 46);
         padding: 6.5rem;
         display: grid;
@@ -171,7 +171,7 @@
     &_block {
         border-radius: 5.2rem;
         // background: #E8F0F5;
-        background: #E8F0F5 url(../../assets/images/bg-white.webp) no-repeat top/cover;
+        background: #E8F0F5 url(./assets/images/bg-white.webp) no-repeat top/cover;
         color: rgb(46, 46, 46);
         padding: 6.5rem;
         display: grid;
@@ -210,7 +210,7 @@
                 position: absolute;
                 width: 3.6rem;
                 height: 3.6rem;
-                background: url(../../assets/images/attention.webp);
+                background: url(./assets/images/attention.webp);
                 background-size: contain;
                 top: 3.2rem;
                 left: 3.2rem;
@@ -247,7 +247,7 @@
                     width: 1rem;
                     height: 1.5rem;
                     position: absolute;
-                    background: url(../../assets/images/style-list.svg);
+                    background: url(./assets/images/style-list.svg);
                     background-size: contain;
                     top: 0.2rem;
                     left: 0rem;
@@ -308,7 +308,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        background: url(../../assets/images/blue-background.webp);
+                        background: url(./assets/images/blue-background.webp);
                         left: 3.2rem;
                     }
                 }
@@ -357,7 +357,7 @@
                             text-transform: uppercase;
                             text-align: center;
                             padding: 2.4rem;
-                            background: url(../../assets/images/blue-background-big.webp);
+                            background: url(./assets/images/blue-background-big.webp);
                             display: block;
                             border-radius: 2rem;
                             transition: transform .5s;
