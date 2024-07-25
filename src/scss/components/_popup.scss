@@ -109,7 +109,7 @@ body::before {
 
   &__body {
     display: flex;
-    background: #e8f0f5 url(../../assets/images/bg-white.webp) no-repeat top/cover;
+    background: #e8f0f5 url(./assets/images/bg-white.webp) no-repeat top/cover;
     border-radius: 7rem;
     @include small-tablet {
       flex-direction: column;
